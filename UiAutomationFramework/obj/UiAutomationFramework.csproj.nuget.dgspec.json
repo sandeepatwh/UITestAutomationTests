@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ashuc\\Downloads\\UITestsExample-20190713T050012Z-001\\UITestsExample\\UiAutomationFramework\\UiAutomationFramework.csproj": {}
+    "C:\\Development\\WooliesXUITests\\UiAutomationFramework\\UiAutomationFramework.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ashuc\\Downloads\\UITestsExample-20190713T050012Z-001\\UITestsExample\\UiAutomationFramework\\UiAutomationFramework.csproj": {
+    "C:\\Development\\WooliesXUITests\\UiAutomationFramework\\UiAutomationFramework.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ashuc\\Downloads\\UITestsExample-20190713T050012Z-001\\UITestsExample\\UiAutomationFramework\\UiAutomationFramework.csproj",
+        "projectUniqueName": "C:\\Development\\WooliesXUITests\\UiAutomationFramework\\UiAutomationFramework.csproj",
         "projectName": "UiAutomationFramework",
-        "projectPath": "C:\\Users\\ashuc\\Downloads\\UITestsExample-20190713T050012Z-001\\UITestsExample\\UiAutomationFramework\\UiAutomationFramework.csproj",
+        "projectPath": "C:\\Development\\WooliesXUITests\\UiAutomationFramework\\UiAutomationFramework.csproj",
         "packagesPath": "C:\\Users\\ashuc\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ashuc\\Downloads\\UITestsExample-20190713T050012Z-001\\UITestsExample\\UiAutomationFramework\\obj\\",
+        "outputPath": "C:\\Development\\WooliesXUITests\\UiAutomationFramework\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -41,6 +41,14 @@
       "frameworks": {
         "netcoreapp2.1": {
           "dependencies": {
+            "DotNetSeleniumExtras.PageObjects": {
+              "target": "Package",
+              "version": "[3.11.0, )"
+            },
+            "DotNetSeleniumExtras.PageObjects.Core": {
+              "target": "Package",
+              "version": "[3.12.0, )"
+            },
             "DotNetSeleniumExtras.WaitHelpers": {
               "target": "Package",
               "version": "[3.11.0, )"

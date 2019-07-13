@@ -9,7 +9,7 @@ Background:
 
 
 @mytag
-Scenario: Multiple Items order placement
+Scenario: Single Item order placement
 	When User select the category
 	And User finishes adding single item in the cart
 	When User places the order

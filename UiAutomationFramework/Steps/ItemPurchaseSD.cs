@@ -20,6 +20,7 @@ namespace UiAutomationFramework.Steps
         CategoryPage _category;
         OrderPage _order;
 
+      //  WebSitePages _pages = new WebSitePages();
 
         public ItemPurchaseSD(ScenarioContext injectedContext)
         {
@@ -33,7 +34,8 @@ namespace UiAutomationFramework.Steps
         [Given(@"User navidates to login screen")]
         public void GivenUserNavidatesToLoginScreen()
         {
-            _home.OpenHomePage().ClickSignIn();
+          //  _pages.Page<HomePage>().OpenHomePage().ClickSignIn();
+           _home.OpenHomePage().ClickSignIn();
         }
 
 

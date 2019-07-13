@@ -1,4 +1,5 @@
-﻿using OpenQA.Selenium.Support.PageObjects;
+﻿
+using SeleniumExtras.PageObjects;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
@@ -7,13 +8,17 @@ namespace UiAutomationFramework.Helper
 {
    public class WebSitePages
     {
-        public static T Page<T>()
-        {
-            var page = Activator.CreateInstance<T>();
+        //public T Page<T>()
+        //{
 
-           // PageFactory.InitElements(Browser.Driver, page);
+        //  //PageFactory.InitElements(T, new DefaultElementLocator(driver));
 
-            return page;
-        }
+
+        //    //var page = Activator.CreateInstance<T>();
+            
+        //    //PageFactory.InitElements( page, Browser.Driver);
+
+        //    //return page;
+      //  }
     }
 }

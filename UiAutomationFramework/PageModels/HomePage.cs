@@ -6,12 +6,15 @@ namespace UiAutomationFramework.PageModels
 {
     public class HomePage
     {
-         //[FindsBy(How = How.CssSelector, Using = "a.login")]
+        //[FindsBy(How = How.CssSelector, Using = "a.login")]
         //private IWebElement SignIn { get; set; }
+
+        //  public IWebElement SignInButton => Browser.Driver.FindElement
 
         public HomePage ClickSignIn()
         {
             Browser.Driver.FindElement(By.CssSelector("a.login")).Click();
+          //  SignIn.Click();
             return this;
         }
 
@@ -19,7 +22,7 @@ namespace UiAutomationFramework.PageModels
         {
           //Browser.Driver.Navigate().GoToUrl(ConfigurationManager.AppSettings["TestUrl"]);//
             Browser.Driver.Navigate().GoToUrl("http://automationpractice.com/index.php");
-            Browser.Driver.Manage().Window.Maximize();
+          //  Browser.Driver.Manage().Window.Maximize();
             return this;
         }
 

@@ -105,12 +105,12 @@ namespace UiAutomationFramework.Features
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Multiple Items order placement")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Single Item order placement")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "ItemPurchase")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("mytag")]
-        public virtual void MultipleItemsOrderPlacement()
+        public virtual void SingleItemOrderPlacement()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Multiple Items order placement", null, new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Single Item order placement", null, new string[] {
                         "mytag"});
 #line 12
 this.ScenarioInitialize(scenarioInfo);

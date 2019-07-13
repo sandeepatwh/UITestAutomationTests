@@ -1,0 +1,46 @@
+C:\wooliesX\UITestsCode\UiAutomationFramework\bin\Debug\netcoreapp2.1\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\wooliesX\UITestsCode\UiAutomationFramework\bin\Debug\netcoreapp2.1\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\wooliesX\UITestsCode\UiAutomationFramework\bin\Debug\netcoreapp2.1\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\wooliesX\UITestsCode\UiAutomationFramework\bin\Debug\netcoreapp2.1\TechTalk.SpecFlow.MSTest.SpecFlowPlugin.dll
+C:\wooliesX\UITestsCode\UiAutomationFramework\bin\Debug\netcoreapp2.1\UiAutomationFramework.dll.config
+C:\wooliesX\UITestsCode\UiAutomationFramework\bin\Debug\netcoreapp2.1\UiAutomationFramework.deps.json
+C:\wooliesX\UITestsCode\UiAutomationFramework\bin\Debug\netcoreapp2.1\UiAutomationFramework.runtimeconfig.json
+C:\wooliesX\UITestsCode\UiAutomationFramework\bin\Debug\netcoreapp2.1\UiAutomationFramework.runtimeconfig.dev.json
+C:\wooliesX\UITestsCode\UiAutomationFramework\bin\Debug\netcoreapp2.1\UiAutomationFramework.dll
+C:\wooliesX\UITestsCode\UiAutomationFramework\bin\Debug\netcoreapp2.1\UiAutomationFramework.pdb
+C:\wooliesX\UITestsCode\UiAutomationFramework\obj\Debug\netcoreapp2.1\UiAutomationFramework.csproj.CoreCompileInputs.cache
+C:\wooliesX\UITestsCode\UiAutomationFramework\obj\Debug\netcoreapp2.1\UiAutomationFramework.AssemblyInfoInputs.cache
+C:\wooliesX\UITestsCode\UiAutomationFramework\obj\Debug\netcoreapp2.1\UiAutomationFramework.AssemblyInfo.cs
+C:\wooliesX\UITestsCode\UiAutomationFramework\obj\Debug\netcoreapp2.1\UiAutomationFramework.dll
+C:\wooliesX\UITestsCode\UiAutomationFramework\obj\Debug\netcoreapp2.1\UiAutomationFramework.pdb
+C:\ui automation\UITestsExample\UiAutomationFramework\bin\Debug\netcoreapp2.1\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\ui automation\UITestsExample\UiAutomationFramework\bin\Debug\netcoreapp2.1\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\ui automation\UITestsExample\UiAutomationFramework\bin\Debug\netcoreapp2.1\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\ui automation\UITestsExample\UiAutomationFramework\bin\Debug\netcoreapp2.1\TechTalk.SpecFlow.MSTest.SpecFlowPlugin.dll
+C:\ui automation\UITestsExample\UiAutomationFramework\bin\Debug\netcoreapp2.1\UiAutomationFramework.dll.config
+C:\ui automation\UITestsExample\UiAutomationFramework\bin\Debug\netcoreapp2.1\UiAutomationFramework.deps.json
+C:\ui automation\UITestsExample\UiAutomationFramework\bin\Debug\netcoreapp2.1\UiAutomationFramework.runtimeconfig.json
+C:\ui automation\UITestsExample\UiAutomationFramework\bin\Debug\netcoreapp2.1\UiAutomationFramework.runtimeconfig.dev.json
+C:\ui automation\UITestsExample\UiAutomationFramework\bin\Debug\netcoreapp2.1\UiAutomationFramework.dll
+C:\ui automation\UITestsExample\UiAutomationFramework\bin\Debug\netcoreapp2.1\UiAutomationFramework.pdb
+C:\ui automation\UITestsExample\UiAutomationFramework\obj\Debug\netcoreapp2.1\UiAutomationFramework.csprojAssemblyReference.cache
+C:\ui automation\UITestsExample\UiAutomationFramework\obj\Debug\netcoreapp2.1\UiAutomationFramework.csproj.CoreCompileInputs.cache
+C:\ui automation\UITestsExample\UiAutomationFramework\obj\Debug\netcoreapp2.1\UiAutomationFramework.AssemblyInfoInputs.cache
+C:\ui automation\UITestsExample\UiAutomationFramework\obj\Debug\netcoreapp2.1\UiAutomationFramework.AssemblyInfo.cs
+C:\ui automation\UITestsExample\UiAutomationFramework\obj\Debug\netcoreapp2.1\UiAutomationFramework.dll
+C:\ui automation\UITestsExample\UiAutomationFramework\obj\Debug\netcoreapp2.1\UiAutomationFramework.pdb
+C:\Users\ashuc\Downloads\UITestsExample-20190713T050012Z-001\UITestsExample\UiAutomationFramework\bin\Debug\netcoreapp2.1\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\ashuc\Downloads\UITestsExample-20190713T050012Z-001\UITestsExample\UiAutomationFramework\bin\Debug\netcoreapp2.1\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\ashuc\Downloads\UITestsExample-20190713T050012Z-001\UITestsExample\UiAutomationFramework\bin\Debug\netcoreapp2.1\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\ashuc\Downloads\UITestsExample-20190713T050012Z-001\UITestsExample\UiAutomationFramework\bin\Debug\netcoreapp2.1\TechTalk.SpecFlow.MSTest.SpecFlowPlugin.dll
+C:\Users\ashuc\Downloads\UITestsExample-20190713T050012Z-001\UITestsExample\UiAutomationFramework\bin\Debug\netcoreapp2.1\UiAutomationFramework.dll.config
+C:\Users\ashuc\Downloads\UITestsExample-20190713T050012Z-001\UITestsExample\UiAutomationFramework\bin\Debug\netcoreapp2.1\UiAutomationFramework.deps.json
+C:\Users\ashuc\Downloads\UITestsExample-20190713T050012Z-001\UITestsExample\UiAutomationFramework\bin\Debug\netcoreapp2.1\UiAutomationFramework.runtimeconfig.json
+C:\Users\ashuc\Downloads\UITestsExample-20190713T050012Z-001\UITestsExample\UiAutomationFramework\bin\Debug\netcoreapp2.1\UiAutomationFramework.runtimeconfig.dev.json
+C:\Users\ashuc\Downloads\UITestsExample-20190713T050012Z-001\UITestsExample\UiAutomationFramework\bin\Debug\netcoreapp2.1\UiAutomationFramework.dll
+C:\Users\ashuc\Downloads\UITestsExample-20190713T050012Z-001\UITestsExample\UiAutomationFramework\bin\Debug\netcoreapp2.1\UiAutomationFramework.pdb
+C:\Users\ashuc\Downloads\UITestsExample-20190713T050012Z-001\UITestsExample\UiAutomationFramework\obj\Debug\netcoreapp2.1\UiAutomationFramework.csproj.CoreCompileInputs.cache
+C:\Users\ashuc\Downloads\UITestsExample-20190713T050012Z-001\UITestsExample\UiAutomationFramework\obj\Debug\netcoreapp2.1\UiAutomationFramework.AssemblyInfoInputs.cache
+C:\Users\ashuc\Downloads\UITestsExample-20190713T050012Z-001\UITestsExample\UiAutomationFramework\obj\Debug\netcoreapp2.1\UiAutomationFramework.AssemblyInfo.cs
+C:\Users\ashuc\Downloads\UITestsExample-20190713T050012Z-001\UITestsExample\UiAutomationFramework\obj\Debug\netcoreapp2.1\UiAutomationFramework.dll
+C:\Users\ashuc\Downloads\UITestsExample-20190713T050012Z-001\UITestsExample\UiAutomationFramework\obj\Debug\netcoreapp2.1\UiAutomationFramework.pdb

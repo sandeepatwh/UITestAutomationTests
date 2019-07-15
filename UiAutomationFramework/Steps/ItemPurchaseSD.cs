@@ -16,26 +16,28 @@ namespace UiAutomationFramework.Steps
         private readonly ScenarioContext context;
         HomePage _home;
         LoginPage _login;
-        MyACcountPage _account;
+        MyAccountPage _account;
         CategoryPage _category;
         OrderPage _order;
+        SearchPage _search;
 
-      //  WebSitePages _pages = new WebSitePages();
+        //  WebSitePages _pages = new WebSitePages();
 
         public ItemPurchaseSD(ScenarioContext injectedContext)
         {
             context = injectedContext;
             _home = new HomePage();
             _login = new LoginPage();
-            _account = new MyACcountPage();
+            _account = new MyAccountPage();
             _category = new CategoryPage();
+            _search = new SearchPage();
         }
 
         [Given(@"User navidates to login screen")]
         public void GivenUserNavidatesToLoginScreen()
         {
-          //  _pages.Page<HomePage>().OpenHomePage().ClickSignIn();
-           _home.OpenHomePage().ClickSignIn();
+            //  _pages.Page<HomePage>().OpenHomePage().ClickSignIn();
+            _home.OpenHomePage().ClickSignIn();
         }
 
 
@@ -44,6 +46,22 @@ namespace UiAutomationFramework.Steps
         {
             _login.LoginToWebSite(table);
         }
+
+
+       
+              [When(@"User searches the website with (.*) criteria")]
+        public void WhenUserSearchesTheWebsiteWithCriteria(string searchString)
+        {
+            _home.OpenHomePage().SearchItem(searchString);
+        }
+
+        [Then(@"Number of items appear as (.*) in Top Seller and Best Seller section")]
+        public void ThenNumverOfItemsAppearAsInTopSellerAndBestSellerSection(int resultCount)
+        {
+            _search.VerifySearchResult(resultCount);
+        }
+
+
 
         [When(@"User select the category")]
         public void WhenUserSelectTheCategory()
@@ -75,5 +93,10 @@ namespace UiAutomationFramework.Steps
         {
             Assert.AreEqual("Your order on My Store is complete.", _order.ReturnOrderConfirmationMessage());
         }
+
+
+
+
+
     }
 }

@@ -6,10 +6,10 @@ using System.Text;
 
 namespace UiAutomationFramework.Helper
 {
-   public class WebDriverExtensions
+    public class WebDriverExtensions
     {
 
-             public static IWebElement WaitForElementToBePresent(IWebElement element)
+        public static IWebElement WaitForElementToBePresent(IWebElement element)
         {
             return new WebDriverWait(Browser.Driver, TimeSpan.FromMilliseconds(20000)).Until(SeleniumExtras.WaitHelpers.ExpectedConditions
                             .ElementToBeClickable(element));

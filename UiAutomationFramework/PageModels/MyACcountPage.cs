@@ -6,7 +6,7 @@ using UiAutomationFramework.Helper;
 
 namespace UiAutomationFramework.PageModels
 {
-    public class MyACcountPage
+    public class MyAccountPage
     {   
         public void GoToWomenSetion()
         {

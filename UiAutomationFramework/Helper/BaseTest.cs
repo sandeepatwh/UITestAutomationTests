@@ -12,11 +12,11 @@ namespace UiAutomationFramework.Helper
     public class BaseTest
     {
         [BeforeScenario]
-        public void BeforeScenario()
-        {
-            if (Browser.Driver == null || ((RemoteWebDriver)Browser.Driver).SessionId == null)
-                Browser.Initialize();
-        }
+        //public void BeforeScenario()
+        //{
+        //    if (Browser.Driver == null || ((RemoteWebDriver)Browser.Driver).SessionId == null)
+        //      //  Browser.Initialize();
+        //}
 
         [AfterScenario]
         public void AfterScenario()

@@ -1,4 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using OpenQA.Selenium;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -11,7 +12,7 @@ using UiAutomationFramework.PageModels;
 namespace UiAutomationFramework.Steps
 {
     [Binding]
-    public sealed class ItemPurchaseSD : BaseTest
+    public sealed class ItemPurchaseSD
     {
         private readonly ScenarioContext context;
         HomePage _home;
@@ -20,17 +21,18 @@ namespace UiAutomationFramework.Steps
         CategoryPage _category;
         OrderPage _order;
         SearchPage _search;
-
-        //  WebSitePages _pages = new WebSitePages();
-
-        public ItemPurchaseSD(ScenarioContext injectedContext)
+        IWebDriver _driver = Browser.Driver;
+   
+        public ItemPurchaseSD()
         {
-            context = injectedContext;
-            _home = new HomePage();
-            _login = new LoginPage();
-            _account = new MyAccountPage();
-            _category = new CategoryPage();
-            _search = new SearchPage();
+          //  context = injectedContext;
+            _home = new HomePage(_driver);
+            _login = new LoginPage(_driver);
+            _account = new MyAccountPage(_driver);
+            _category = new CategoryPage(_driver);
+            _search = new SearchPage(_driver);
+            _order = new OrderPage(_driver);     
+
         }
 
         [Given(@"User navidates to login screen")]
@@ -52,7 +54,7 @@ namespace UiAutomationFramework.Steps
               [When(@"User searches the website with (.*) criteria")]
         public void WhenUserSearchesTheWebsiteWithCriteria(string searchString)
         {
-            _home.OpenHomePage().SearchItem(searchString);
+            _home.SearchItem(searchString);
         }
 
         [Then(@"Number of items appear as (.*) in Top Seller and Best Seller section")]
@@ -73,7 +75,7 @@ namespace UiAutomationFramework.Steps
         public void WhenUserFinishesAddingSingleItemInTheCart()
         {
             _category.AddSingleItemToTheCart();
-            _order = new OrderPage(Browser.Driver);
+            
             _order.GoToShoppingCart();
             _order.ProceedCheckoutFromOrderSummaryPage();
             _order.ProceedToCheckoutPageFromAddressPage();
@@ -92,6 +94,8 @@ namespace UiAutomationFramework.Steps
         public void ThenOrderIsSuccessfulyPlaced()
         {
             Assert.AreEqual("Your order on My Store is complete.", _order.ReturnOrderConfirmationMessage());
+            _driver.Quit();
+            _driver.Dispose();
         }
 
 

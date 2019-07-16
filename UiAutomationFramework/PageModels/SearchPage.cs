@@ -11,20 +11,29 @@ namespace UiAutomationFramework.PageModels
 {
     public class SearchPage
     {
+        private IWebDriver _driver;
+
+        public SearchPage(IWebDriver driver)
+        {
+            this._driver = driver;
+        }
+
         public int GetTopSellerCount()
         {
-            return Browser.Driver.FindElements(By.CssSelector("#best-sellers_block_right > div > ul > li")).Count;
+            return _driver.FindElements(By.CssSelector("#best-sellers_block_right > div > ul > li")).Count;
 
         }
 
         internal void VerifySearchResult(int resultCount)
         {
             Assert.AreEqual(GetTopSellerCount(), GetBestSellerCount(), "Total number of items are different in 'Top Seller category' and 'Best Seller category'");
+            _driver.Quit();
+            _driver.Dispose();
         }
 
         private int GetBestSellerCount()
         {
-            var TotalItemsOnLeftSideBar = Browser.Driver.FindElement(By.ClassName("product_list"));
+            var TotalItemsOnLeftSideBar = _driver.FindElement(By.ClassName("product_list"));
 
             return TotalItemsOnLeftSideBar.FindElements(By.ClassName("ajax_block_product")).Count;            
         }

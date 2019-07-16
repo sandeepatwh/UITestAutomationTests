@@ -9,6 +9,12 @@ namespace UiAutomationFramework.PageModels
 {
     public class LoginPage
     {
+        private IWebDriver _driver;
+
+        public LoginPage(IWebDriver driver)
+        {
+            this._driver = driver;
+        }
 
 
         //[FindsBy(How = How.Id, Using = "email")]
@@ -19,15 +25,15 @@ namespace UiAutomationFramework.PageModels
 
         //[FindsBy(How = How.Id, Using = "SubmitLogin")]
         //private IWebElement SignInButton { get; set; } 
-         
-        
+
+
 
 
         public void LoginToWebSite(Table table)
         {
-            IWebElement Email = Browser.Driver.FindElement(By.Id("email"));
-            IWebElement Password = Browser.Driver.FindElement(By.Id("passwd"));
-            IWebElement SignInButton = Browser.Driver.FindElement(By.Id("SubmitLogin"));
+            IWebElement Email = _driver.FindElement(By.Id("email"));
+            IWebElement Password = _driver.FindElement(By.Id("passwd"));
+            IWebElement SignInButton = _driver.FindElement(By.Id("SubmitLogin"));
 
             dynamic t = table.CreateDynamicInstance();
             Email.Clear();

@@ -12,12 +12,34 @@ namespace UiAutomationFramework.Helper
 {
     public class Browser
     {
-        public static IWebDriver Driver { get; private set; }
+        //  public static IWebDriver Driver { get; private set; }
 
-        public static void Initialize()
+        public static IWebDriver Driver => GetDriver();
+
+        //  public static IWebDriver Driver => GetDriver();
+        //public static void Initialize()
+        //{
+        //    Driver = new ChromeDriver(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location));
+        //    Driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(2);
+        //}
+
+        //public static IWebDriver GetDriver()
+        //{
+        //    if (Driver == null)
+        //    {
+        //        return new ChromeDriver(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location));
+        //    }
+
+        //    else return Driver;
+        //}
+
+        public static IWebDriver GetDriver()
         {
-            Driver = new ChromeDriver(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location));
-            Driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(2);
+            return new ChromeDriver(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location));
+
         }
+
+
+
     }
 }

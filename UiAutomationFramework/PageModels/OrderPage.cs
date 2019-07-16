@@ -1,5 +1,6 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Interactions;
+using SeleniumExtras.PageObjects;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -11,57 +12,55 @@ namespace UiAutomationFramework.PageModels
     {
         private readonly IWebDriver _driver;
         private IWebElement _element;
+        private IWebElement GoToShoppingCardLink => _driver.FindElement(By.XPath("//*[@class='shopping_cart']/a"));
+        private IWebElement ProceedCheckoutFromOrderSummaryPageLink => _driver.FindElement(By.XPath("//*[@class='cart_navigation clearfix']//a[@class='button btn btn-default standard-checkout button-medium']"));
+        private IWebElement ProceedToCheckoutPageFromAddressPageLink => _driver.FindElement(By.Name("processAddress"));
+        private IWebElement ProceedToCheckOutFromShippingPageLink => _driver.FindElement(By.Id("cgv"));
+        private IWebElement processCarrierLink => _driver.FindElement(By.Name("processCarrier"));
+        private IWebElement bankWirePaymentLink => _driver.FindElement(By.CssSelector("a.bankwire > span"));
+        private ICollection<IWebElement> buttons => _driver.FindElements(By.CssSelector("#cart_navigation > button > span"));
+        private IWebElement OrderConfirmationMessageLink => _driver.FindElement(By.CssSelector("#center_column > div > p > strong"));
 
-        public Actions actions { get => new Actions(_driver); }
 
         public OrderPage(IWebDriver driver)
         {
             _driver = driver;
+            PageFactory.InitElements(driver, this);
         }
 
         public void GoToShoppingCart()
         {
-            _element = _driver.FindElement(By.XPath("//*[@class='shopping_cart']/a"));
-            string url = _element.GetAttribute("href");
-            _driver.Navigate().GoToUrl(url);
+            _driver.Navigate().GoToUrl(GoToShoppingCardLink.GetAttribute("href"));
         }
 
         public void ProceedCheckoutFromOrderSummaryPage()
         {
-            _element = _driver.FindElement(By.XPath(
-                "//*[@class='cart_navigation clearfix']//a[@class='button btn btn-default standard-checkout button-medium']"));
-            ((IJavaScriptExecutor)_driver).ExecuteScript("arguments[0].scrollIntoView(true);", _element);
-            WebDriverExtensions.WaitForElementToBePresent(_driver, _element).Click();
+            ((IJavaScriptExecutor)_driver).ExecuteScript("arguments[0].scrollIntoView(true);", ProceedCheckoutFromOrderSummaryPageLink);
+            WebDriverExtensions.WaitForElementToBePresent(_driver, ProceedCheckoutFromOrderSummaryPageLink).Click();
         }
 
         public void ProceedToCheckoutPageFromAddressPage()
         {
-            _element = _driver.FindElement(By.Name("processAddress"));
-            ((IJavaScriptExecutor)_driver).ExecuteScript("arguments[0].scrollIntoView(true);", _element);
-            WebDriverExtensions.WaitForElementToBePresent(_driver, _element).Click();
+            ((IJavaScriptExecutor)_driver).ExecuteScript("arguments[0].scrollIntoView(true);", ProceedToCheckoutPageFromAddressPageLink);
+            WebDriverExtensions.WaitForElementToBePresent(_driver, ProceedToCheckoutPageFromAddressPageLink).Click();
         }
 
         public void ProceedToCheckOutFromShippingPage()
         {
-            _element = _driver.FindElement(By.Id("cgv"));
-            if (!_element.Selected)
+            if (!ProceedToCheckOutFromShippingPageLink.Selected)
             {
-                _element.Click();
+                ProceedToCheckOutFromShippingPageLink.Click();
             }
-            _element = _driver.FindElement(By.Name("processCarrier"));
-            WebDriverExtensions.WaitForElementToBePresent(_driver, _element).Click();
+            WebDriverExtensions.WaitForElementToBePresent(_driver, processCarrierLink).Click();
         }
-             
-   
+
         public void PayByBankWire()
         {
-            IWebElement bankWirePayment = _driver.FindElement(By.CssSelector("a.bankwire > span"));
-            bankWirePayment.Click();
+            bankWirePaymentLink.Click();
         }
 
         public void ConfirmOrder()
         {
-            ICollection<IWebElement> buttons = _driver.FindElements(By.CssSelector("#cart_navigation > button > span"));
             foreach (IWebElement button in buttons)
             {
                 try
@@ -80,7 +79,7 @@ namespace UiAutomationFramework.PageModels
 
         public string ReturnOrderConfirmationMessage()
         {
-          return  WebDriverExtensions.WaitForElementToBePresent(_driver, _driver.FindElement(By.CssSelector("#center_column > div > p > strong"))).Text;
+            return WebDriverExtensions.WaitForElementToBePresent(_driver, OrderConfirmationMessageLink).Text;
         }
     }
 }

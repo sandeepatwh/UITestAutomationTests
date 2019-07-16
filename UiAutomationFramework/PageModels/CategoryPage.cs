@@ -1,5 +1,6 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Interactions;
+using SeleniumExtras.PageObjects;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -10,22 +11,28 @@ namespace UiAutomationFramework.PageModels
     public class CategoryPage
     {
         private IWebDriver _driver;
+        private IWebElement ProductListGrid => _driver.FindElement(By.CssSelector("ul.product_list.grid.row"));
+        private IWebElement ProductListContainer => _driver.FindElement(By.CssSelector("div.product-container"));
+        private IList<IWebElement> productContainers => _driver.FindElements(By.CssSelector("div.product-container"));
+        private IWebElement AddToCart => _driver.FindElement(By.XPath("//*[@id='add_to_cart']/button"));
+        private IWebElement ProcedToCheckOut => _driver.FindElement(By.XPath("//*[@id=\"layer_cart\"]/div[1]/div[2]/div[4]/a/span"));
+      
+
 
         public CategoryPage(IWebDriver driver)
         {
             this._driver = driver;
+            PageFactory.InitElements(driver, this);
         }
 
         public Actions actions { get => new Actions(_driver); }
 
         public void AddSingleItemToTheCart()
         {
-            var element = _driver.FindElement(By.CssSelector("ul.product_list.grid.row"));
-            actions.MoveToElement(element).Perform();
-            
-            WebDriverExtensions.WaitForElementToBePresent(_driver, _driver.FindElement(By.CssSelector("div.product-container")));
+            actions.MoveToElement(ProductListGrid).Perform();
 
-            IList<IWebElement> productContainers = _driver.FindElements(By.CssSelector("div.product-container"));
+            WebDriverExtensions.WaitForElementToBePresent(_driver, ProductListContainer);
+
             foreach (var product in productContainers)
             {
                 IWebElement ele = product.FindElement(By.ClassName("product_img_link"));
@@ -40,14 +47,14 @@ namespace UiAutomationFramework.PageModels
 
             AddItemToCart();
 
-            IWebElement ProceedToCheckOut = WebDriverExtensions.WaitForElementToBePresent(_driver, _driver.FindElement(By.XPath("//*[@id=\"layer_cart\"]/div[1]/div[2]/div[4]/a/span")));
+            IWebElement ProceedToCheckOut = WebDriverExtensions.WaitForElementToBePresent(_driver, ProcedToCheckOut);
             ProceedToCheckOut.Click();
         }
 
 
         public void AddItemToCart()
         {
-            _driver.FindElement(By.XPath("//*[@id='add_to_cart']/button")).Click();          
+            AddToCart.Click();          
         }
 
     }

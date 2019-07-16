@@ -1,8 +1,8 @@
 ﻿using OpenQA.Selenium;
+using SeleniumExtras.PageObjects;
 using System;
 using System.Collections.Generic;
-using System.Text;
-using UiAutomationFramework.Helper;
+
 
 namespace UiAutomationFramework.PageModels
 {
@@ -13,6 +13,7 @@ namespace UiAutomationFramework.PageModels
         public MyAccountPage(IWebDriver driver)
         {
             this._driver = driver;
+            PageFactory.InitElements(driver, this);
         }
 
         public void GoToWomenSetion()

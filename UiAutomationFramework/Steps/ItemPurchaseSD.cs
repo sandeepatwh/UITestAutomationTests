@@ -22,23 +22,26 @@ namespace UiAutomationFramework.Steps
         OrderPage _order;
         SearchPage _search;
         IWebDriver _driver = Browser.Driver;
-   
+        WebSitePages _web;
+
         public ItemPurchaseSD()
         {
-          //  context = injectedContext;
+            //  context = injectedContext;
             _home = new HomePage(_driver);
             _login = new LoginPage(_driver);
             _account = new MyAccountPage(_driver);
             _category = new CategoryPage(_driver);
             _search = new SearchPage(_driver);
-            _order = new OrderPage(_driver);     
+            _order = new OrderPage(_driver);
+            _web = new WebSitePages();
 
         }
 
         [Given(@"User navidates to login screen")]
         public void GivenUserNavidatesToLoginScreen()
         {
-            //  _pages.Page<HomePage>().OpenHomePage().ClickSignIn();
+           //_web.Page<HomePage>(_driver).OpenHomePage().ClickSignIn();
+            
             _home.OpenHomePage().ClickSignIn();
         }
 
@@ -50,8 +53,8 @@ namespace UiAutomationFramework.Steps
         }
 
 
-       
-              [When(@"User searches the website with (.*) criteria")]
+
+        [When(@"User searches the website with (.*) criteria")]
         public void WhenUserSearchesTheWebsiteWithCriteria(string searchString)
         {
             _home.SearchItem(searchString);
@@ -75,7 +78,7 @@ namespace UiAutomationFramework.Steps
         public void WhenUserFinishesAddingSingleItemInTheCart()
         {
             _category.AddSingleItemToTheCart();
-            
+
             _order.GoToShoppingCart();
             _order.ProceedCheckoutFromOrderSummaryPage();
             _order.ProceedToCheckoutPageFromAddressPage();

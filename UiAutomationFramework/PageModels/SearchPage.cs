@@ -1,7 +1,9 @@
 ﻿using System;
+using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.PageObjects;
+using SeleniumExtras.PageObjects;
 using TechTalk.SpecFlow;
 using TechTalk.SpecFlow.Assist;
 
@@ -12,15 +14,20 @@ namespace UiAutomationFramework.PageModels
     public class SearchPage
     {
         private IWebDriver _driver;
+        private  IList<IWebElement> TopSellerCount => _driver.FindElements(By.CssSelector("#best-sellers_block_right > div > ul > li"));
+        private IWebElement TopSeller => _driver.FindElement(By.ClassName("product_list"));
+        private IList<IWebElement> TopSellerProducts => TopSeller.FindElements(By.ClassName("ajax_block_product"));
+        
 
         public SearchPage(IWebDriver driver)
         {
             this._driver = driver;
+            PageFactory.InitElements(driver, this);
         }
 
         public int GetTopSellerCount()
         {
-            return _driver.FindElements(By.CssSelector("#best-sellers_block_right > div > ul > li")).Count;
+            return TopSellerCount.Count;
 
         }
 
@@ -33,9 +40,7 @@ namespace UiAutomationFramework.PageModels
 
         private int GetBestSellerCount()
         {
-            var TotalItemsOnLeftSideBar = _driver.FindElement(By.ClassName("product_list"));
-
-            return TotalItemsOnLeftSideBar.FindElements(By.ClassName("ajax_block_product")).Count;            
+            return TopSellerProducts.Count;            
         }
     }
 }

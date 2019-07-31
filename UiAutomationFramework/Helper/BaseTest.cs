@@ -35,8 +35,6 @@ namespace UiAutomationFramework.Helper
         public void AfterScenario()
         {
             Thread.Sleep(1000);
-            Browser.Driver.Quit();
-            Browser.Driver.Dispose();
         }
     }
 }

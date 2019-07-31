@@ -14,45 +14,21 @@ namespace UiAutomationFramework.Steps
     [Binding]
     public sealed class ItemPurchaseSD
     {
-        private readonly ScenarioContext context;
-        HomePage _home;
-        LoginPage _login;
-        MyAccountPage _account;
-        CategoryPage _category;
-        OrderPage _order;
-        SearchPage _search;
-        IWebDriver _driver = Browser.Driver;
-        WebPages _web;
-
         private readonly IWebPages _pages;
+        public ItemPurchaseSD(IWebPages pages) => _pages = pages;
 
-        public ItemPurchaseSD(IWebPages pages)
-        {
-            _pages = pages;
-            //  context = injectedContext;
-            _home = new HomePage(_driver);
-            _login = new LoginPage(_driver);
-            _account = new MyAccountPage(_driver);
-            _category = new CategoryPage(_driver);
-            _search = new SearchPage(_driver);
-            _order = new OrderPage(_driver);
-            _web = new WebPages();
-
-        }
 
         [Given(@"User navidates to login screen")]
         public void GivenUserNavidatesToLoginScreen()
         {
             _pages.HomePage.OpenHomePage().ClickSignIn();
-            
-          //  _home.OpenHomePage().ClickSignIn();
         }
 
 
         [Given(@"User logins with following credentials")]
         public void GivenUserLoginsWithFollowingCredentials(Table table)
         {
-            _login.LoginToWebSite(table);
+            _pages.LoginPage.LoginToWebSite(table);
         }
 
 
@@ -60,13 +36,13 @@ namespace UiAutomationFramework.Steps
         [When(@"User searches the website with (.*) criteria")]
         public void WhenUserSearchesTheWebsiteWithCriteria(string searchString)
         {
-            _home.SearchItem(searchString);
+            _pages.HomePage.SearchItem(searchString);
         }
 
         [Then(@"Number of items appear as (.*) in Top Seller and Best Seller section")]
         public void ThenNumverOfItemsAppearAsInTopSellerAndBestSellerSection(int resultCount)
         {
-            _search.VerifySearchResult(resultCount);
+            _pages.SearchPage.VerifySearchResult(resultCount);
         }
 
 
@@ -74,34 +50,31 @@ namespace UiAutomationFramework.Steps
         [When(@"User select the category")]
         public void WhenUserSelectTheCategory()
         {
-            _account.GoToWomenSetion();
+            _pages.MyAccountPage.GoToWomenSetion();
         }
 
         [When(@"User finishes adding single item in the cart")]
         public void WhenUserFinishesAddingSingleItemInTheCart()
         {
-            _category.AddSingleItemToTheCart();
-
-            _order.GoToShoppingCart();
-            _order.ProceedCheckoutFromOrderSummaryPage();
-            _order.ProceedToCheckoutPageFromAddressPage();
-            _order.ProceedToCheckOutFromShippingPage();
+            _pages.CategoryPage.AddSingleItemToTheCart();
+            _pages.OrderPage.GoToShoppingCart();
+            _pages.OrderPage.ProceedCheckoutFromOrderSummaryPage();
+            _pages.OrderPage.ProceedToCheckoutPageFromAddressPage();
+            _pages.OrderPage.ProceedToCheckOutFromShippingPage();
         }
 
 
         [When(@"User places the order")]
         public void WhenUserPlacesTheOrder()
         {
-            _order.PayByBankWire();
-            _order.ConfirmOrder();
+            _pages.OrderPage.PayByBankWire();
+            _pages.OrderPage.ConfirmOrder();
         }
 
         [Then(@"Order is successfuly placed")]
         public void ThenOrderIsSuccessfulyPlaced()
         {
-            Assert.AreEqual("Your order on My Store is complete.", _order.ReturnOrderConfirmationMessage());
-            _driver.Quit();
-            _driver.Dispose();
+            Assert.AreEqual("Your order on My Store is complete.", _pages.OrderPage.ReturnOrderConfirmationMessage());
         }
 
 

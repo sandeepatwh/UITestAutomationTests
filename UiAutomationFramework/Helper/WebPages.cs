@@ -8,33 +8,25 @@ using UiAutomationFramework.PageModels;
 
 namespace UiAutomationFramework.Helper
 {
-   public class WebPages : IWebPages
+    public class WebPages : IWebPages
     {
         private readonly IWebDriver _driver;
-        public WebPages()
-        {
-            _driver = Browser.Driver;
-        }
-
-        public LoginPage LoginPage
-        {
-            get => new LoginPage(_driver);
-            set => new LoginPage(_driver);
-        }
-
-        public HomePage HomePage
-        {
-            get => new HomePage(_driver);
-            set => new LoginPage(_driver);
-        }
-
-
+        public WebPages() => _driver = Browser.Driver;
+        public LoginPage LoginPage => new LoginPage(_driver);
+        public HomePage HomePage => new HomePage(_driver);
+        public MyAccountPage MyAccountPage => new MyAccountPage(_driver);
+        public CategoryPage CategoryPage => new CategoryPage(_driver);
+        public SearchPage SearchPage => new SearchPage(_driver);
+        public OrderPage OrderPage => new OrderPage(_driver);
     }
 
     public interface IWebPages
     {
-        LoginPage LoginPage { get; set; }
-        HomePage HomePage { get; set; }
-
+        LoginPage LoginPage { get; }
+        HomePage HomePage { get; }
+        MyAccountPage MyAccountPage { get; }
+        CategoryPage CategoryPage { get; }
+        SearchPage SearchPage { get; }
+        OrderPage OrderPage { get; }
     }
 }

@@ -22,10 +22,13 @@ namespace UiAutomationFramework.Steps
         OrderPage _order;
         SearchPage _search;
         IWebDriver _driver = Browser.Driver;
-        WebSitePages _web;
+        WebPages _web;
 
-        public ItemPurchaseSD()
+        private readonly IWebPages _pages;
+
+        public ItemPurchaseSD(IWebPages pages)
         {
+            _pages = pages;
             //  context = injectedContext;
             _home = new HomePage(_driver);
             _login = new LoginPage(_driver);
@@ -33,16 +36,16 @@ namespace UiAutomationFramework.Steps
             _category = new CategoryPage(_driver);
             _search = new SearchPage(_driver);
             _order = new OrderPage(_driver);
-            _web = new WebSitePages();
+            _web = new WebPages();
 
         }
 
         [Given(@"User navidates to login screen")]
         public void GivenUserNavidatesToLoginScreen()
         {
-           //_web.Page<HomePage>(_driver).OpenHomePage().ClickSignIn();
+            _pages.HomePage.OpenHomePage().ClickSignIn();
             
-            _home.OpenHomePage().ClickSignIn();
+          //  _home.OpenHomePage().ClickSignIn();
         }
 
 

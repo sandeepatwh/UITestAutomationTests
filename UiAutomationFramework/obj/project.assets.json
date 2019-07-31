@@ -6166,11 +6166,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Development\\WooliesXUITests\\UiAutomationFramework\\UiAutomationFramework.csproj",
+      "projectUniqueName": "C:\\Development\\UITestAutomationTests\\UiAutomationFramework\\UiAutomationFramework.csproj",
       "projectName": "UiAutomationFramework",
-      "projectPath": "C:\\Development\\WooliesXUITests\\UiAutomationFramework\\UiAutomationFramework.csproj",
+      "projectPath": "C:\\Development\\UITestAutomationTests\\UiAutomationFramework\\UiAutomationFramework.csproj",
       "packagesPath": "C:\\Users\\ashuc\\.nuget\\packages\\",
-      "outputPath": "C:\\Development\\WooliesXUITests\\UiAutomationFramework\\obj\\",
+      "outputPath": "C:\\Development\\UITestAutomationTests\\UiAutomationFramework\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

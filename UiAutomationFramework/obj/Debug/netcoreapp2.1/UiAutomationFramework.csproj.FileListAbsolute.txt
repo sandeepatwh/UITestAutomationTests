@@ -63,7 +63,6 @@ C:\Development\UITestAutomationTests\UiAutomationFramework\bin\Debug\netcoreapp2
 C:\Development\UITestAutomationTests\UiAutomationFramework\bin\Debug\netcoreapp2.1\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
 C:\Development\UITestAutomationTests\UiAutomationFramework\bin\Debug\netcoreapp2.1\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
 C:\Development\UITestAutomationTests\UiAutomationFramework\bin\Debug\netcoreapp2.1\TechTalk.SpecFlow.MSTest.SpecFlowPlugin.dll
-C:\Development\UITestAutomationTests\UiAutomationFramework\bin\Debug\netcoreapp2.1\UiAutomationFramework.dll.config
 C:\Development\UITestAutomationTests\UiAutomationFramework\bin\Debug\netcoreapp2.1\UiAutomationFramework.deps.json
 C:\Development\UITestAutomationTests\UiAutomationFramework\bin\Debug\netcoreapp2.1\UiAutomationFramework.runtimeconfig.json
 C:\Development\UITestAutomationTests\UiAutomationFramework\bin\Debug\netcoreapp2.1\UiAutomationFramework.runtimeconfig.dev.json

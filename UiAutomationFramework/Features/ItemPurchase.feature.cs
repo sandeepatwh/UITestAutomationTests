@@ -91,7 +91,7 @@ namespace UiAutomationFramework.Features
         {
 #line 4
 #line 5
- testRunner.Given("User navidates to login screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("User navigates to login screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
             TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
                         "Email",

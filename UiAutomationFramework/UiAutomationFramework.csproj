@@ -10,6 +10,8 @@
     <PackageReference Include="DotNetSeleniumExtras.PageObjects" Version="3.11.0" />
     <PackageReference Include="DotNetSeleniumExtras.PageObjects.Core" Version="3.12.0" />
     <PackageReference Include="DotNetSeleniumExtras.WaitHelpers" Version="3.11.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="2.2.0" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.2.0" />
     <PackageReference Include="MSTest.TestAdapter" Version="1.4.0" />
     <PackageReference Include="MSTest.TestFramework" Version="1.4.0" />

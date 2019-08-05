@@ -1,9 +1,7 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Interactions;
 using SeleniumExtras.PageObjects;
-using System;
 using System.Collections.Generic;
-using System.Text;
 using UiAutomationFramework.Helper;
 
 namespace UiAutomationFramework.PageModels
@@ -24,13 +22,11 @@ namespace UiAutomationFramework.PageModels
             this._driver = driver;
             PageFactory.InitElements(driver, this);
         }
-
         public Actions actions { get => new Actions(_driver); }
 
         public void AddSingleItemToTheCart()
         {
             actions.MoveToElement(ProductListGrid).Perform();
-
             WebDriverExtensions.WaitForElementToBePresent(_driver, ProductListContainer);
 
             foreach (var product in productContainers)
@@ -44,9 +40,7 @@ namespace UiAutomationFramework.PageModels
                     break;
                 }
             }
-
             AddItemToCart();
-
             IWebElement ProceedToCheckOut = WebDriverExtensions.WaitForElementToBePresent(_driver, ProcedToCheckOut);
             ProceedToCheckOut.Click();
         }

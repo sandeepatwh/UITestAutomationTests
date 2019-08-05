@@ -2,7 +2,7 @@
 	In order to make sure new functionality didnt break
 
 Background: 
-	Given User navidates to login screen
+	Given User navigates to login screen
 	And User logins with following credentials
 	| Email                    | Password |
 	| sandysomu@gmail.com	   | Password123 |

@@ -1,13 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using OpenQA.Selenium;
-using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Text;
 using TechTalk.SpecFlow;
 using UiAutomationFramework.Helper;
-using UiAutomationFramework.PageModels;
 
 namespace UiAutomationFramework.Steps
 {
@@ -16,23 +9,19 @@ namespace UiAutomationFramework.Steps
     {
         private readonly IWebPages _pages;
         public ItemPurchaseSD(IWebPages pages) => _pages = pages;
-
-
-        [Given(@"User navidates to login screen")]
-        public void GivenUserNavidatesToLoginScreen()
+        
+        [Given(@"User navigates to login screen")]
+        public void GivenUsernavigatesToLoginScreen()
         {
             _pages.HomePage.OpenHomePage().ClickSignIn();
         }
-
 
         [Given(@"User logins with following credentials")]
         public void GivenUserLoginsWithFollowingCredentials(Table table)
         {
             _pages.LoginPage.LoginToWebSite(table);
         }
-
-
-
+        
         [When(@"User searches the website with (.*) criteria")]
         public void WhenUserSearchesTheWebsiteWithCriteria(string searchString)
         {
@@ -40,13 +29,11 @@ namespace UiAutomationFramework.Steps
         }
 
         [Then(@"Number of items appear as (.*) in Top Seller and Best Seller section")]
-        public void ThenNumverOfItemsAppearAsInTopSellerAndBestSellerSection(int resultCount)
+        public void ThenNumberOfItemsAppearAsInTopSellerAndBestSellerSection(int resultCount)
         {
             _pages.SearchPage.VerifySearchResult(resultCount);
         }
-
-
-
+        
         [When(@"User select the category")]
         public void WhenUserSelectTheCategory()
         {
@@ -62,8 +49,7 @@ namespace UiAutomationFramework.Steps
             _pages.OrderPage.ProceedToCheckoutPageFromAddressPage();
             _pages.OrderPage.ProceedToCheckOutFromShippingPage();
         }
-
-
+        
         [When(@"User places the order")]
         public void WhenUserPlacesTheOrder()
         {
@@ -76,10 +62,6 @@ namespace UiAutomationFramework.Steps
         {
             Assert.AreEqual("Your order on My Store is complete.", _pages.OrderPage.ReturnOrderConfirmationMessage());
         }
-
-
-
-
-
+        
     }
 }

@@ -14,6 +14,7 @@ namespace UiAutomationFramework.Steps
         public void GivenUsernavigatesToLoginScreen()
         {
             _pages.HomePage.OpenHomePage().ClickSignIn();
+
         }
 
         [Given(@"User logins with following credentials")]

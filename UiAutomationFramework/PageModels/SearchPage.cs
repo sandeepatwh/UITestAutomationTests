@@ -31,7 +31,7 @@ namespace UiAutomationFramework.PageModels
 
         }
 
-        internal void VerifySearchResult(int resultCount)
+        public void VerifySearchResult(int resultCount)
         {
             Assert.AreEqual(GetTopSellerCount(), GetBestSellerCount(), "Total number of items are different in 'Top Seller category' and 'Best Seller category'");
             _driver.Quit();

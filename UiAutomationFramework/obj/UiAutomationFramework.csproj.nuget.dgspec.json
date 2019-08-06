@@ -78,10 +78,6 @@
               "version": "[2.1.0, )",
               "autoReferenced": true
             },
-            "Selenium.Chrome.WebDriver": {
-              "target": "Package",
-              "version": "[74.0.0, )"
-            },
             "Selenium.Support": {
               "target": "Package",
               "version": "[3.141.0, )"

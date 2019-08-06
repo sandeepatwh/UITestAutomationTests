@@ -35,7 +35,11 @@ namespace UiAutomationFramework.Helper
 
         public static IWebDriver GetDriver()
         {
-            return new ChromeDriver(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location));
+           // string test = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName +"\\Drivers";
+
+            return  new ChromeDriver(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName +
+                                      "\\Drivers");
+            //  return new ChromeDriver(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location));
 
         }
 

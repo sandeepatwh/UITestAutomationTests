@@ -1,4 +1,3 @@
-C:\Development\UITestAutomationTests\UiAutomationBddTests\bin\Debug\netcoreapp2.1\UiAutomationFramework.dll
 C:\Development\UITestAutomationTests\UiAutomationBddTests\obj\Debug\netcoreapp2.1\UiAutomationBddTests.csproj.CoreCompileInputs.cache
 C:\Development\UITestAutomationTests\UiAutomationBddTests\obj\Debug\netcoreapp2.1\UiAutomationBddTests.AssemblyInfoInputs.cache
 C:\Development\UITestAutomationTests\UiAutomationBddTests\obj\Debug\netcoreapp2.1\UiAutomationBddTests.AssemblyInfo.cs
@@ -11,6 +10,7 @@ C:\Development\UITestAutomationTests\UiAutomationBddTests\bin\Debug\netcoreapp2.
 C:\Development\UITestAutomationTests\UiAutomationBddTests\bin\Debug\netcoreapp2.1\UiAutomationBddTests.runtimeconfig.dev.json
 C:\Development\UITestAutomationTests\UiAutomationBddTests\bin\Debug\netcoreapp2.1\UiAutomationBddTests.dll
 C:\Development\UITestAutomationTests\UiAutomationBddTests\bin\Debug\netcoreapp2.1\UiAutomationBddTests.pdb
+C:\Development\UITestAutomationTests\UiAutomationBddTests\bin\Debug\netcoreapp2.1\UiAutomationFramework.dll
 C:\Development\UITestAutomationTests\UiAutomationBddTests\bin\Debug\netcoreapp2.1\UiAutomationFramework.pdb
 C:\Development\UITestAutomationTests\UiAutomationBddTests\obj\Debug\netcoreapp2.1\UiAutomationBddTests.csprojAssemblyReference.cache
 C:\Development\UITestAutomationTests\UiAutomationBddTests\obj\Debug\netcoreapp2.1\UiAutomationBddTests.csproj.CopyComplete

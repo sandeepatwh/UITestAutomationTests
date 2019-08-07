@@ -2,8 +2,6 @@
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.PageObjects;
 using SeleniumExtras.PageObjects;
-using TechTalk.SpecFlow;
-using TechTalk.SpecFlow.Assist;
 using UiAutomationFramework.Helper;
 using How = SeleniumExtras.PageObjects.How;
 
@@ -17,11 +15,12 @@ namespace UiAutomationFramework.PageModels
         private IWebElement SearchTextBox => _driver.FindElement(By.Id("search_query_top"));
         private IWebElement SearchButton => _driver.FindElement(By.CssSelector("#searchbox > button"));
 
-
+        private AppSettings _appSettings;
         public HomePage(IWebDriver driver)
         {
             this._driver = driver;
             PageFactory.InitElements(driver, this);
+            _appSettings = new AppSettings();
         }
         
 
@@ -33,9 +32,8 @@ namespace UiAutomationFramework.PageModels
 
         public HomePage OpenHomePage()
         {
-            //Browser.Driver.Navigate().GoToUrl(ConfigurationManager.AppSettings["TestUrl"]);//
-            _driver.Navigate().GoToUrl("http://automationpractice.com/index.php");
-            // _driver.Manage().Window.Maximize();
+            _driver.Navigate().GoToUrl(_appSettings.BaseUrl);
+            _driver.Manage().Window.Maximize();
             return this;
         }
         

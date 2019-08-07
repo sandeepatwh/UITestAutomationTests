@@ -62,10 +62,6 @@
               "version": "[2.1.0, )",
               "autoReferenced": true
             },
-            "Selenium.Chrome.WebDriver": {
-              "target": "Package",
-              "version": "[76.0.0, )"
-            },
             "SpecFlow": {
               "target": "Package",
               "version": "[3.0.225, )"
@@ -172,22 +168,6 @@
             "Selenium.WebDriver": {
               "target": "Package",
               "version": "[3.141.0, )"
-            },
-            "SpecFlow": {
-              "target": "Package",
-              "version": "[3.0.225, )"
-            },
-            "SpecFlow.Assist.Dynamic": {
-              "target": "Package",
-              "version": "[1.4.1, )"
-            },
-            "SpecFlow.MsTest": {
-              "target": "Package",
-              "version": "[3.0.225, )"
-            },
-            "SpecFlow.Tools.MsBuild.Generation": {
-              "target": "Package",
-              "version": "[3.0.225, )"
             }
           },
           "imports": [

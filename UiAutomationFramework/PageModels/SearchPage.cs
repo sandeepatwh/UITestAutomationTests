@@ -4,8 +4,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.PageObjects;
 using SeleniumExtras.PageObjects;
-using TechTalk.SpecFlow;
-using TechTalk.SpecFlow.Assist;
+
 
 using UiAutomationFramework.Helper;
 

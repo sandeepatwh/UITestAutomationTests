@@ -1,5 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using TechTalk.SpecFlow;
+using TechTalk.SpecFlow.Assist;
 using UiAutomationFramework.Helper;
 
 namespace UiAutomationBddTests.Steps
@@ -20,7 +21,8 @@ namespace UiAutomationBddTests.Steps
         [Given(@"User logins with following credentials")]
         public void GivenUserLoginsWithFollowingCredentials(Table table)
         {
-            _pages.LoginPage.LoginToWebSite(table);
+            dynamic t = table.CreateDynamicInstance();
+            _pages.LoginPage.LoginToWebSite(t.Email.ToString(), t.Password.ToString());
         }
         
         [When(@"User searches the website with (.*) criteria")]

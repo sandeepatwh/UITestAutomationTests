@@ -2,8 +2,6 @@
 using OpenQA.Selenium.Support.PageObjects;
 using SeleniumExtras.PageObjects;
 using System;
-using TechTalk.SpecFlow;
-using TechTalk.SpecFlow.Assist;
 using UiAutomationFramework.Helper;
 
 namespace UiAutomationFramework.PageModels
@@ -21,14 +19,13 @@ namespace UiAutomationFramework.PageModels
             this._driver = driver;
             PageFactory.InitElements(driver, this);
         }
-        
-        public void LoginToWebSite(Table table)
+
+        public void LoginToWebSite(string userName, string password)
         {
-            dynamic t = table.CreateDynamicInstance();
             Email.Clear();
-            Email.SendKeys(t.Email.ToString());
+            Email.SendKeys(userName);
             Password.Clear();
-            Password.SendKeys(t.Password.ToString());
+            Password.SendKeys(password);
             SignInButton.Click();
         }
     }

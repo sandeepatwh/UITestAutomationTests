@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.1",
-    "signature": "a6b0646b80f2aaf032b8c2cfa712339985a6a65d"
+    "signature": "72b7f8d985ce1a8d3dd25ef391e0abfc1adafb89"
   },
   "compilationOptions": {},
   "targets": {
@@ -11,7 +11,6 @@
           "MSTest.TestAdapter": "1.4.0",
           "MSTest.TestFramework": "1.4.0",
           "Microsoft.NET.Test.Sdk": "16.2.0",
-          "Selenium.Chrome.WebDriver": "76.0.0",
           "SpecFlow": "3.0.225",
           "SpecFlow.Assist.Dynamic": "1.4.1",
           "SpecFlow.MsTest": "3.0.225",
@@ -496,7 +495,6 @@
         }
       },
       "runtime.native.System/4.3.0": {},
-      "Selenium.Chrome.WebDriver/76.0.0": {},
       "Selenium.Support/3.141.0": {
         "dependencies": {
           "Selenium.WebDriver": "3.141.0"
@@ -1179,11 +1177,7 @@
           "Microsoft.Extensions.Configuration.Json": "2.2.0",
           "Microsoft.NET.Test.Sdk": "16.2.0",
           "Selenium.Support": "3.141.0",
-          "Selenium.WebDriver": "3.141.0",
-          "SpecFlow": "3.0.225",
-          "SpecFlow.Assist.Dynamic": "1.4.1",
-          "SpecFlow.MsTest": "3.0.225",
-          "SpecFlow.Tools.MsBuild.Generation": "3.0.225"
+          "Selenium.WebDriver": "3.141.0"
         },
         "runtime": {
           "UiAutomationFramework.dll": {}
@@ -1371,13 +1365,6 @@
       "sha512": "sha512-c/qWt2LieNZIj1jGnVNsE2Kl23Ya2aSTBuXMD6V7k9KWr6l16Tqdwq+hJScEpWER9753NWC8h96PaVNY5Ld7Jw==",
       "path": "runtime.native.system/4.3.0",
       "hashPath": "runtime.native.system.4.3.0.nupkg.sha512"
-    },
-    "Selenium.Chrome.WebDriver/76.0.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-BR3x33O9K0v8OVJ3taMN0m9mEGYmS0hUx/cw8bHLUdy0E3iAw1C8ZxwWokNHn+uPxRsix8LqzSRu3nxSmykAnQ==",
-      "path": "selenium.chrome.webdriver/76.0.0",
-      "hashPath": "selenium.chrome.webdriver.76.0.0.nupkg.sha512"
     },
     "Selenium.Support/3.141.0": {
       "type": "package",

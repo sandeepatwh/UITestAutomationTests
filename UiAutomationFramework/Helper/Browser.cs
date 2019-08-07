@@ -37,8 +37,8 @@ namespace UiAutomationFramework.Helper
         {
            // string test = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName +"\\Drivers";
 
-            return  new ChromeDriver(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName +
-                                      "\\Drivers");
+            return  new ChromeDriver(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.Parent.FullName +
+                                      "\\UiAutomationFramework\\Drivers");
             //  return new ChromeDriver(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location));
 
         }
